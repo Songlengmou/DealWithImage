@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".test.act.TestDetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f8f8f8">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/iv_product_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_margin="@dimen/dp_5"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/empty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:ems="1"
+                    android:gravity="center"
+                    android:text="没有更多内容啦" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_product_details_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="名称：YT19080072"
+                        android:textColor="@color/black_33"
+                        android:textSize="@dimen/dp_20" />
+
+                    <com.anningtex.base.weight.tab.TagFlowLayout
+                        android:id="@+id/tag_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_product_details_name"
+                        android:layout_marginTop="0dp" />
+
+                    <TextView
+                        android:id="@+id/tv_product_details_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tag_layout"
+                        android:text="所属分类: 图片" />
+
+                    <TextView
+                        android:id="@+id/tv_product_details_speclist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_product_details_category"
+                        android:layout_marginTop="-1dp"
+                        android:text="所属标签:"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_product_details_country"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_product_details_name"
+                        android:layout_alignParentRight="true"
+                        android:text="中国" />
+
+                    <TextView
+                        android:id="@+id/tv_product_details_designer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_product_details_category"
+                        android:text="张三" />
+
+                    <TextView
+                        android:id="@+id/tv_product_details_update_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_product_details_designer"
+                        android:text="2019-08-21 16:56:32" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="@color/gray"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_product_details_comment_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_50"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/dp_10"
+                        android:text="评论(20)"
+                        android:textColor="@color/gray_f3"
+                        android:textSize="@dimen/dp_20" />
+
+                    <TextView
+                        android:id="@+id/iv_product_details_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:text="查看全部"
+                        android:textSize="@dimen/dp_20"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <com.anningtex.dealwithimage.test.other.ListViewForScrollView
+                    android:id="@+id/listview_product_details_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fadingEdge="vertical" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:id="@+id/layout_edit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_58"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/et_product_list"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_34"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_marginLeft="49dp"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/iv_product_attention"
+                android:background="@drawable/edit_custom_style"
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:text="说点什么吧..."
+                android:textColor="#B6B6B6"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_product_shopping_car"
+                android:layout_width="@dimen/dp_34"
+                android:layout_height="@dimen/dp_34"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/dp_5"
+                android:src="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/iv_product_attention"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/dp_5"
+                android:layout_toRightOf="@id/iv_product_shopping_car"
+                android:src="@mipmap/ic_launcher"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

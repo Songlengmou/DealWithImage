@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/tv_item_comment_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:lines="1"
+        android:text="李四"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_item_comment_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="3dp"
+        android:lines="1"
+        android:text="2019-09-09 09:42:04" />
+
+    <RatingBar
+        android:id="@+id/item_ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_item_comment_name"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@id/iv_icon"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:progressBackgroundTint="@color/gray"
+        android:progressTint="@color/colorAccent"
+        android:secondaryProgressTint="@color/colorAccent"
+        android:stepSize="0.5"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_item_comment_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_ratingBar"
+        android:layout_toRightOf="@id/iv_icon"
+        android:lines="1"
+        android:text="法师"
+        android:textColor="#999999"
+        android:textSize="15sp" />
+</RelativeLayout>
