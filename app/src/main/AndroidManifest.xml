@@ -20,7 +20,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DealWithImage">
-        <activity android:name=".test.act.TestActivity"></activity>
+        <activity android:name=".TestElseActivity" />
+        <activity android:name=".test.act.TestActivity" />
         <activity android:name=".test.act.TestDetailActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

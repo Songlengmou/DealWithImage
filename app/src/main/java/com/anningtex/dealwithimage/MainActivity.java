@@ -17,7 +17,7 @@ import com.bumptech.glide.Glide;
  */
 public class MainActivity extends AppCompatActivity {
     private ImageView mIvCs;
-    private Button mBtnTest;
+    private Button mBtnTest, mBtnTestElse;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private void initView() {
         mIvCs = findViewById(R.id.iv_cs);
         mBtnTest = findViewById(R.id.btn_test);
+        mBtnTestElse = findViewById(R.id.btn_test_else);
 
         Glide.with(this).load("https://www.africatex.com:706/medium/20191105/89d37d1803751aee9d454cdbdcc0dac6.jpg")
                 .bitmapTransform(new CropWhiteSpace(this))
@@ -40,5 +41,6 @@ public class MainActivity extends AppCompatActivity {
 //                .into(mIvCs);
 
         mBtnTest.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, TestActivity.class)));
+        mBtnTestElse.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, TestElseActivity.class)));
     }
 }
